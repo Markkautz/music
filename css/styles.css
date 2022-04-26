@@ -1,0 +1,186 @@
+/*  
+Author: Mark Kautz 
+File Name: styles.css
+Date: 04/26/2022
+*/
+
+
+* CSS Reset */
+body, header, nav, main, footer, img, h1, ul, section, aside, figure, figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* Style rule for images */
+img {
+    max-width: 100%;
+    display: block;
+}
+/* Style rule for box sizing applies to all elements */  
+* {  
+    box-sizing: border-box;
+}
+
+/* section{
+
+} */
+/*Style rules for mobile viewport*/
+aside {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #373684;
+  text-shadow: 3px 3px 10px #8280cb;
+}
+/*Style rules for mobile viewport*/
+figure{
+    position: relative;
+    max-width: 275px;
+    margin: 2% auto;
+    border: 8px solid #373684;
+}
+/*Style rules for mobile viewport*/
+figcaption{
+    position: absolute;
+    bottom: 0;
+    background: rgba(55, 54, 132, 0.7);
+    color: #fff;
+    width: 100%;
+    padding: 5% 0;
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+/*Hide tab-desk class*/
+.tab-desk {
+    display: none;
+}
+
+/* Style rules for header content */
+header {
+    text-align: center;
+    font-size: 1.5em;
+    color: #373684;
+}
+header h1 {
+    font-family: 'DM Serif Display', serif;
+}
+/* Style rules for navigation area */
+nav {
+    background-color: #373684;
+}
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+nav li {
+    display: block;
+    font-size: 2em;
+    border-top: 1px solid #e5e9fc;
+}
+nav li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+/* Style rules for main content */
+main {
+    padding: 2%;
+    background-color: #e5e9fc;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+}
+main p {
+    font-size: 1.25em;
+}
+.action {
+    font-size: 1.25em;
+    color: #373684;
+    font-weight: bold;
+}
+#piano, #guitar, #violin {
+     margin: 0 2%;
+}
+#info {
+    clear: left;
+    background-color: #c0caf7;
+    padding: 1% 2%;
+}
+#info ul {
+  margin-left: 10%;
+}
+.round{
+  border-radius: 8px;
+}
+#contact {
+    text-align: center;
+}
+.tel-link {
+    background-color: #373684;
+    padding: 2%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+.tel-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+}
+.tel-link {
+    background-color: #373684;
+    padding: 2%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+.tel-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+}
+#contact .email-link {
+    color: #4645a8;
+    text-decoration: none;
+    font-weight: bold;
+}
+.map {
+    border: 5px solid #373684;
+    width: 95%;
+    height: 50%;
+}
+
+/* Tablet Media query */
+@media only screen and (min-width:768px){
+    
+    .tab-desk, .action, .round, .tel-link, .email-link, .map, .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    aside{        
+        grid-column: 1/span 2;
+    }    
+
+}
+
+/* Desktop Media Query */
+@media only screen and (min-width:992px){
+    /* style rule for the grid class selector */
+    .tab-desk, .action, .round, .tel-link, .email-link, .map, .grid{        
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    figcaption{                
+        font-size: 1em;
+    }
+    aside{
+        grid-column: 1/span 4;
+    }
+}    
